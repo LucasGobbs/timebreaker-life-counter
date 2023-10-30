@@ -35,9 +35,9 @@
 
   }
 </script>
-<div class="space-y-2">
+<div class="space-y-2 w-full">
   <div class="flex-row space-y-3 border-2 bg-gray-800 border-yellow-600 rounded-lg py-2">
-    <div class="text-center text-4xl ">
+    <div class="text-center text-4xl text-shadow shadow-black">
       {lifeValue}
       {#if displayedOperator}
         <span in:fade={{  delay: 75, duration: 75 }} 
@@ -49,9 +49,10 @@
   </div>
   <div class="flex flex-row w-full space-x-2">
     <!-- Operations -->
-    <div class="flex flex-col justify-between border-2 rounded-lg border-yellow-600 p-1 bg-gray-700">
+    <div class="flex flex-col justify-between border-2 rounded-lg border-yellow-600 p-1 bg-gray-800 p-2">
       {#each ops as op}
-        <button on:click={() => onOperatorClick(op)}>
+        <button on:click={() => onOperatorClick(op)}
+          class=" lg:text-2xl text-shadow shadow-black">
           {op}
         </button>
       {/each}
@@ -63,11 +64,13 @@
         {#if digit !== null}
         <div class=
           "justify-center align-middle flex p-0.5 rounded-full w-9 h-9
+          lg:w-24 lg:h-24
           transition ease-in-out delay-75 hover:scale-110 bg-gradient-to-t from-amber-200 to-amber-600
           ">
           <button 
             on:click={() => onNumberClick(digit)}
-            class="bg-gray-700 w-8 h-8 rounded-full w-8 h-8 
+            class="bg-gray-700 w-8 h-8 rounded-full 
+            md:w-[95%] md:h-[95%] lg:text-4xl text-shadow shadow-black
             transition ease-in-out delay-75  hover:bg-gray-800">
               {digit}
           </button>

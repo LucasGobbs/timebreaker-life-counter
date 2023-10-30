@@ -7,7 +7,7 @@
   @font-face {
     font-family: lemon;
     font-weight: 400;
-    src: local('Lemon Milk') url(./fonts/LEMONMILK-Bold.otf) format("otf");
+    src: local('Lemon Milk') url(./fonts/LEMONMILK-Regular.otf) format("otf");
   }
 
 }

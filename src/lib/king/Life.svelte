@@ -1,5 +1,4 @@
 <script>
-  // import TailwindCss from './lib/TailwindCSS.svelte';
   let lifeValue = 25;
   
 </script>
