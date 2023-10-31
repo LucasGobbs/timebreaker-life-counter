@@ -22,7 +22,8 @@
 </script>
 
 <div>
-  <div class="text-center md:text-4xl">turn</div>
+  <div class="text-center md:text-4xl">turno</div>
+  
   <div class="flex flex-row space-x-2 items-center">
     {#if turn>1}
       <button on:click={handleMinus}> - </button>
@@ -30,7 +31,7 @@
       <Empty classValues={"w-6 h-6"} />
     {/if}
     
-    <div class="border-5 rounded-full text-center items-center justify-center w-14 h-14 md:w-24 md:h-24
+    <div class="radial border-5 rounded-full text-center items-center justify-center w-14 h-14 md:w-24 md:h-24
      flex p-3 relative
     border-yellow-500 text-2xl font-bold text-3xl md:text-6xl">
         {turn}
@@ -39,7 +40,10 @@
   </div>
 </div>
 
-<style lang="scss">
+<style>
+  .radial {
+    background: radial-gradient(circle at center, gray 0, rgb(73, 71, 71), rgb(8, 8, 8) 100%)
+  }
   button {
     width: 1.5rem;
     height: 1.5rem;

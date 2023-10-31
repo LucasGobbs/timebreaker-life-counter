@@ -36,12 +36,12 @@
   }
 </script>
 <div class="space-y-2 w-full">
-  <div class="flex-row space-y-3 border-2 bg-gray-800 border-yellow-600 rounded-lg py-2">
-    <div class="text-center text-4xl text-shadow shadow-black">
+  <div class="h-20 flex-row space-y-3 border-2 bg-gray-800 radial border-yellow-600 rounded-lg py-2">
+    <div class="text-center text-5xl  text-shadow shadow-black ">
       {lifeValue}
       {#if displayedOperator}
         <span in:fade={{  delay: 75, duration: 75 }} 
-        class="text-gray-400">
+        class="text-blue-400">
         {displayedOperator} {displayedValue}
       </span>
       {/if}
@@ -49,7 +49,7 @@
   </div>
   <div class="flex flex-row w-full space-x-2">
     <!-- Operations -->
-    <div class="flex flex-col justify-between border-2 rounded-lg border-yellow-600 p-1 bg-gray-800 p-2">
+    <div class="flex flex-col justify-between py-2 px-2  border-2 rounded-lg border-yellow-600 bg-gray-800">
       {#each ops as op}
         <button on:click={() => onOperatorClick(op)}
           class=" lg:text-2xl text-shadow shadow-black">
@@ -64,12 +64,12 @@
         {#if digit !== null}
         <div class=
           "justify-center align-middle flex p-0.5 rounded-full w-9 h-9
-          lg:w-24 lg:h-24
+          lg:w-24 lg:h-24 items-center
           transition ease-in-out delay-75 hover:scale-110 bg-gradient-to-t from-amber-200 to-amber-600
           ">
           <button 
             on:click={() => onNumberClick(digit)}
-            class="bg-gray-700 w-8 h-8 rounded-full 
+            class="radial w-8 h-8 rounded-full 
             md:w-[95%] md:h-[95%] lg:text-4xl text-shadow shadow-black
             transition ease-in-out delay-75  hover:bg-gray-800">
               {digit}
@@ -87,5 +87,7 @@
 </div>
 
 <style>
-
+  .radial {
+    background: radial-gradient(circle at center, gray 0, rgb(73, 71, 71), rgb(8, 8, 8) 100%)
+  }
 </style>
